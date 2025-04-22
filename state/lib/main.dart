@@ -43,7 +43,9 @@ class _ContadorState extends State<Contador> {
               }, child: Text('-')),
               SizedBox(width: 10),
               ElevatedButton(onPressed: () {
-                contador = 0;
+                setState(() {
+                  contador = 0;
+                });
               }, child: Text('Resetar')),
             ],
           ),
